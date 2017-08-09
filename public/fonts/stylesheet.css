@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'Boxed';
+  src: url('BoxedHeavy.eot');
+  src: url('BoxedHeavy.eot?#iefix') format('embedded-opentype'),
+  url('BoxedHeavy.woff2') format('woff2'),
+  url('BoxedHeavy.woff') format('woff'),
+  url('BoxedHeavy.ttf') format('truetype'),
+  url('BoxedHeavy.svg#BoxedHeavy') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Boxed';
+  src: url('BoxedRegular-Bold.eot');
+  src: url('BoxedRegular-Bold.eot?#iefix') format('embedded-opentype'),
+  url('BoxedRegular-Bold.woff2') format('woff2'),
+  url('BoxedRegular-Bold.woff') format('woff'),
+  url('BoxedRegular-Bold.ttf') format('truetype'),
+  url('BoxedRegular-Bold.svg#BoxedRegular-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Boxed';
+  src: url('BoxedSemibold.eot');
+  src: url('BoxedSemibold.eot?#iefix') format('embedded-opentype'),
+  url('BoxedSemibold.woff2') format('woff2'),
+  url('BoxedSemibold.woff') format('woff'),
+  url('BoxedSemibold.ttf') format('truetype'),
+  url('BoxedSemibold.svg#BoxedSemibold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Boxed';
+  src: url('BoxedRegular.eot');
+  src: url('BoxedRegular.eot?#iefix') format('embedded-opentype'),
+  url('BoxedRegular.woff2') format('woff2'),
+  url('BoxedRegular.woff') format('woff'),
+  url('BoxedRegular.ttf') format('truetype'),
+  url('BoxedRegular.svg#BoxedRegular') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Boxed';
+  src: url('BoxedMedium.eot');
+  src: url('BoxedMedium.eot?#iefix') format('embedded-opentype'),
+  url('BoxedMedium.woff2') format('woff2'),
+  url('BoxedMedium.woff') format('woff'),
+  url('BoxedMedium.ttf') format('truetype'),
+  url('BoxedMedium.svg#BoxedMedium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Boxed';
+  src: url('BoxedBook.eot');
+  src: url('BoxedBook.eot?#iefix') format('embedded-opentype'),
+  url('BoxedBook.woff2') format('woff2'),
+  url('BoxedBook.woff') format('woff'),
+  url('BoxedBook.ttf') format('truetype'),
+  url('BoxedBook.svg#BoxedBook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Boxed';
+  src: url('BoxedLight.eot');
+  src: url('BoxedLight.eot?#iefix') format('embedded-opentype'),
+  url('BoxedLight.woff2') format('woff2'),
+  url('BoxedLight.woff') format('woff'),
+  url('BoxedLight.ttf') format('truetype'),
+  url('BoxedLight.svg#BoxedLight') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Boxed';
+  src: url('BoxedExtralight.eot');
+  src: url('BoxedExtralight.eot?#iefix') format('embedded-opentype'),
+  url('BoxedExtralight.woff2') format('woff2'),
+  url('BoxedExtralight.woff') format('woff'),
+  url('BoxedExtralight.ttf') format('truetype'),
+  url('BoxedExtralight.svg#BoxedExtralight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Boxed';
+  src: url('BoxedThin.eot');
+  src: url('BoxedThin.eot?#iefix') format('embedded-opentype'),
+  url('BoxedThin.woff2') format('woff2'),
+  url('BoxedThin.woff') format('woff'),
+  url('BoxedThin.ttf') format('truetype'),
+  url('BoxedThin.svg#BoxedThin') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+
