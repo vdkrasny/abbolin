@@ -1,0 +1,57 @@
+extends ../layouts/page.pug
+
+block css
+  style.
+    body, html, #content {
+      font-family: sans-serif;
+      height: 100% !important;
+      background-color: #34383B;}
+    .box {
+      position: relative;
+      top: 25%;
+      width: 300px;
+      margin: 0 auto;
+      min-height: 240px;
+      padding: 35px;
+      border-radius: 15px;
+      background: #3b4044;
+      border: 1px solid #2c2f33;
+      box-shadow: 0 0 16px rgba(0,0,0,0.4);}
+    a {
+      color: #A0A4A8 !important;
+      cursor: pointer;
+      text-decoration: none;}
+    a:visited {
+      color: #795252 !important;s}
+    .h1 {
+      color: #A0A4A8;
+      font-size: 24px;
+      margin: 10px 0;
+      text-transform: uppercase;}
+    .h2 {
+      font-size: 18px;
+      color: #A0A4A8;
+      margin: 5px 0;}
+    li {
+      color: #303336;}
+    ul {
+      margin: 10px 0 !important;
+      padding-left: 20px !important;}
+block title
+  +title('index')
+
+mixin show(items)
+ each file in items
+   if file.type === 'file'
+     - var link = file.name.replace('.pug', '.html')
+     if link !== 'index.html'
+       li: a(href=link target="_blank")= link.slice(0, -5)
+   if file.type === 'dir'
+     h2.h2= file.name[0].toUpperCase() + file.name.slice(1)
+     ul
+       +show(file.content)
+block content
+  - var pages = getdata('pages');
+  .box
+    h1.h1= projectName.toUpperCase()
+    +show(pages.content)

@@ -1,0 +1,52 @@
+input[type='radio']
+input[type='checkbox']
+input[type='file']
+  display: none !important
+
++b('btn')
+  display: inline-block
+  line-height: 1
+  color: inherit
+  cursor: pointer
+  user-select: none
+  +m('button')
+    background: none
+    border: 0
+    font: inherit
+    overflow: visible
+    padding: 0
+  +m('link')
+    text-align: center
+    text-decoration: none
+    //white-space: pre
+
++b('btn-control')
+  controls_w = 48px
+
+  display flex
+  position: fixed;
+  left: 50%;
+  background-color: $color-primary;
+  border-radius: 50%;
+  transition: transition 0.1s;
+  z-index: 99;
+  _icon: 40% center
+  &.if-js-disable
+    display none
+  +group()
+    m('section-nav')
+    m('slide-nav')
+    width: controls_w
+    height: @width
+  +m('section-nav', 'down')
+    bottom: 15px;
+    margin-left: ((controls_w / 2) * -1);
+  +m('section-nav', 'up')
+    top: 15px;
+    margin-left: ((controls_w / 2) * -1);
+  +m('slide-nav', 'home')
+    position absolute
+    background-color: $color-secondary
+    bottom: 50%
+    margin-bottom: ((controls_w / 2) * -1);
+    margin-left: ((controls_w / 2) * -1);

@@ -1,0 +1,40 @@
++b('layout-header')
+  margin: 25px 50px
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &.if-js-disable
+    margin: 0
+    padding: 25px 50px
+    position fixed
+    z-index 98
+    &:before
+    &:after
+      content ''
+      display: block
+      position absolute
+      width 50%
+      top: 0
+      bottom 0
+      z-index -1
+    &:before
+      left 0
+      background-color $color-secondary
+    &:after
+      right: 0
+      background-color $color-primary
+  +e('edges')
+    flex-basis 200px
+    display flex
+    z-index: 101
+    +m('start')
+      justify-content flex-start
+    +m('end')
+      justify-content flex-end
+  +e('we-are')
+    flex-basis 500px
+    text-align center

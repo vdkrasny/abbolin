@@ -1,0 +1,29 @@
++b('navigation')
+  display none
+  position fixed
+  width 100%
+  height: 100%
+  left 0
+  top: 0
+  z-index 100
+  background-color: $color-secondary
+  +e('wrapper')
+    display flex
+    flex-direction column
+    height 100%
+  +e('links-group')
+    margin auto
+    width 100%
+  +e('link')
+    display block
+    text-align center
+    padding  15px 0
+    text-decoration none
+    text-transform: uppercase
+    transition all 0.5s ease
+    color #ffffff
+    &:hover
+      background-color: alpha($color-primary, 40%)
+  +e('footer')
+    margin 25px 50px
+    text-align center

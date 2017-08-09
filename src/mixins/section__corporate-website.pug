@@ -1,0 +1,40 @@
+mixin section__corporate-website(ANCHORS)
+  - var layout_fix = 'secondary'; // primary || secondary
+  .b_section.remember-scroll-position(class=layout_fix === 'primary' ? 'section--fix_primary' : 'section--fix_secondary')
+    a.b_btn-control.m_slide-nav.m_slide-nav_home(href=`#${ANCHORS}/0` mix="block:effects mods:[waves], block:btn mods:[link]" style='visibility: hidden;')
+      span.b_icon.m_arrow_left
+    .b_layout-page-fix(class=layout_fix === 'primary' ? 'layout-page-fix--primary' : 'layout-page-fix--secondary')
+      .b_layout
+        .e_title корпоративный сайт
+        .e_descript
+          p Это автономная интернет-страница, на которую потенциальный клиент попадает после клика по рекламному объявлению или в результате поиска. Лендинги достаточно широко используются в маркетинге в силу своего принципиального отличия от традиционного веб-сайта.
+          p Главная цель лендинга — совершение посетителем конкретного (целевого) действия, то веб-сайты имеют многоцелевой характер. Подобное ограничение позволяет посадочной странице быть невероятно эффективной, а потому и оставаться востребованной среди специалистов.
+        .e_footer
+          a.btn.btn--link.ui.ui--view-basic(href=`#${ANCHORS}/1`) оформить бриф
+    .slide.active
+      .b_layout-page
+        div(class=layout_fix === 'primary' ? 'layout-page__secondary layout-page__secondary--primary_fix' : 'layout-page__primary layout-page__primary--secondary_fix')
+          .b_layout
+            .e_title Вопрос-Ответ
+    .slide.if-js-disable
+      .b_layout-page
+        .e_primary.m_secondary_fix
+          .b_layout
+            form.b_field-group.m_vertical
+              .e_item
+                .e_input
+                  input.b_ui-text(type='text' required mix="block:field-group elem:object")
+                  label.e_caption Ваше имя
+                span.e_error-message Имя неправильно заполнено измените что-то
+              .e_item
+                .e_input
+                  input.b_ui-text(type='text' required mix="block:field-group elem:object")
+                  label.e_caption Оставтье свой email
+                span.e_error-message Имя неправильно заполнено измените что-то
+              .e_item
+                .e_input
+                  textarea.b_ui-text(required mix="block:field-group elem:object" style="resize: none")
+                  label.e_caption Оставтье свой email
+                span.e_error-message Имя неправильно заполнено измените что-то
+              .e_item
+                button.b_btn.m_button(mix="block:field-group elem:object, block:ui mods:[view-basic]") Отправить

@@ -1,0 +1,9 @@
+mixin faq
+  .b_faq&attributes(attributes)
+    .b_faq
+      - var faq = getdata('faq');
+      - var active = 'active';
+      - for (var i=0; i<faq.length; i++)
+        .e_item.if-js-disable(class=`${i === 0 ? active : ''}`)
+          span.e_question(mix='block:ui mods:[view-basic]')=faq[i][0]
+          p.e_answer=faq[i][1]

@@ -1,0 +1,75 @@
+mixin section__website-cards(ANCHORS)
+  .b_section.m_fix_secondary.remember-scroll-position
+    a.b_btn-control.m_slide-nav.m_slide-nav_home(href=`#${ANCHORS}/0` mix="block:effects mods:[waves], block:btn mods:[link]" style='visibility: hidden;')
+      span.b_icon.m_arrow_left
+    .b_layout-page-fix.m_secondary
+      .b_layout
+        .e_title САЙТ-ВИЗИТКА
+        .e_descript
+          p Сайт-визитка — это своего рода виртуальная визитная карточка: небольшой сайт с информацией, которая позволяет получить представление о деятельности компании.
+          p Основные разделы визитки:
+          ul
+            li общие сведения о компании;
+            li перечень услуг или список продаваемых товаров;
+            li сведения для покупателя: прайс-листы, листы заказа, фотографии или портфолио;
+            li контактные сведения: адрес, телефон, электронная почта, ФИО ответственных лиц;
+            li прочие разделы в соответствии со спецификой деятельности и интересами клиентов компании.
+        .e_footer
+          a.btn.btn--link.ui.ui--view-basic(href="#") оформить бриф
+    .slide.active
+      .b_layout-page
+        .e_primary.m_secondary_fix
+          .b_layout
+            .e_title Мы делаем:
+            .b_services
+              .e_item
+                img.e_image(src="http://www.whiteweb.ua/templates/whiteweb/landingall/images/sc-1.png" alt="")
+                span.e_caption разработка технической документации
+              .e_item
+                img.e_image(src="http://www.whiteweb.ua/templates/whiteweb/landingland/images/s-01.jpg" alt="")
+                span.e_caption прототпирование
+              .e_item
+                img.e_image(src="http://www.whiteweb.ua/templates/whiteweb/landingall/images/ico-ser-1.png" alt="")
+                span.e_caption дизайн
+              .e_item
+                img.e_image(src="http://www.whiteweb.ua/templates/whiteweb/landingall/images/sc-4.png" alt="")
+                span.e_caption верстка
+              .e_item
+                img.e_image(src="http://www.whiteweb.ua/templates/whiteweb/landingall/images/ico-ser-3.png" alt="")
+                span.e_caption программирование
+              .e_item
+                .e_title Дополнительно
+                ul.e_more
+                  li Гарантия 1 год
+                  li Гарантия 1 год
+                  li Гарантия 1 год
+                  li Тестирование
+            .e_title Результат:
+            .b_examples
+              - for (var x=1; x<4; x++)
+                .e_item
+                  a.b_link.e_seo(href=`#${ANCHORS}/${x}`) dsadsad
+                  .e_image(style="background-image: url(../img/imf.png);")
+                  .e_footer алкогольная продукция
+                  .e_description
+                    p asadasd
+                    p adasda
+                    p asdasdasdasd
+    .slide.if-js-disable
+      .b_layout-page
+        .e_primary.m_secondary_fix
+          .b_layout
+            - for(var i = 0; i < 510; i++)
+              p Описание Proj 1
+    .slide.if-js-disable
+      .b_layout-page
+        .e_primary.m_secondary_fix
+          .b_layout
+            - for(var i = 0; i < 510; i++)
+              p Описание Proj 2
+    .slide.if-js-disable
+      .b_layout-page
+        .e_primary.m_secondary_fix
+          .b_layout
+            - for(var i = 0; i < 510; i++)
+              p Описание Proj 3

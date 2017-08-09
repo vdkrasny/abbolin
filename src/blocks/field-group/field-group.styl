@@ -1,0 +1,56 @@
++b('field-group')
+  display flex
+  justify-content: space-between
+  align-items stretch
+  width: 100%
+  +m('vertical')
+    flex-direction: column
+    +e('error-message')
+      text-align: center
+  +m('horizontal')
+    flex-direction: row
+    +e('error-message')
+      text-align: left
+  +e('item')
+    flex-basis calc(100% / 3 - 15px)
+    margin-top: (15px + 15px)
+  +e('input')
+    position relative
+  +e('object')
+    text-align center
+    width 100%
+    &:focus
+    &:valid
+      & ~ .field-group__caption
+        color $color-white
+        top: -15px;
+  +e('caption')
+    pointer-events: none;
+    color: #000;
+    position: absolute;
+    left: 0;
+    right 0
+    top: 50%;
+    font-size: 15px
+    line-height: 15px
+    text-transform: uppercase
+    margin: -7px auto auto;
+    cursor: text;
+    transition: .2s ease all;
+    text-align center
+  +e('error-message')
+    display none
+    color: #fff;
+    cursor: text;
+    text-transform: lowercase;
+    &.active
+      display block
++b('ui-text')
+  position: relative
+  transition: all 0.5s
+  padding: 9px 14px
+  font-size: 14px
+  color: $color-secondary
+  background-color: $color-white
+  border: 2px solid $color-white
+  border-radius: 20px

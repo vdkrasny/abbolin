@@ -1,0 +1,21 @@
+flex-basis = $size_layout
+
++b('layout-page')
+  position: relative
+  display: flex
+  flex-direcrion: row
+  justify-content: space-between
+  align-items: stretch
+  min-height: 100vh
+  +group()
+    e('primary')
+    e('secondary')
+    flex-basis: 50%
+  +e('primary')
+    background-color: $color-primary
+    +m('secondary', 'fix')
+      margin-left: auto
+  +e('secondary')
+    background-color: $color-secondary
+    +m('primary', 'fix')
+      margin-right: auto

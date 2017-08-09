@@ -1,0 +1,38 @@
+extends /layouts/page.pug
+
+include /blocks/logo/logo.pug
+include /blocks/layout-header/layout-header.pug
+include /blocks/navigation/navigation.pug
+
+block title
+  +title('ABbolin Studio Web')
+
+block css
+  link(rel="stylesheet", href="css/jquery.fullPage.css")
+  link(rel="stylesheet", href="fonts/stylesheet.css")
+  link(rel="stylesheet", href="css/animate.css")
+  link(rel="stylesheet", href="css/main.css")
+
+block js-top
+  script(type="text/javascript" src="js/jquery-3.2.1.min.js")
+
+block js-bottom
+  script(type="text/javascript" src="js/iscroll.js")
+  script(type="text/javascript" src="js/jquery.fullPage.js")
+  script(type="text/javascript" src="js/autosize.min.js")
+  script(type="text/javascript" src="js/main.js")
+block content
+  - var ANCHORS = getdata('anchors');
+  +navigation(ANCHORS)
+  +logo()(class='if-js-disable')
+  .wrapper#full-screen
+    #section-nav_up.if-js-disable.btn.b_btn-control.m_section-nav.m_section-nav_up(mix="block:effects mods:[waves]")
+      span.b_icon.m_arrow_up
+    #section-nav_down.if-js-disable.btn.b_btn-control.m_section-nav.m_section-nav_down(mix="block:effects mods:[waves]")
+      span.b_icon.m_arrow_down
+    +layout-header()(class='if-js-disable')
+    +section__home(ANCHORS[0][0])
+    +section__landing-page(ANCHORS[1][0])
+    +section__website-cards(ANCHORS[2][0])
+    +section__corporate-website(ANCHORS[3][0])
+    +section__faq(ANCHORS[4][0])

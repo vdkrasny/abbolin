@@ -1,0 +1,8 @@
+mixin navigation(LINKS_URL)
+  .b_navigation&attributes(attributes)
+    .e_wrapper
+      nav.e_links-group
+        - for (i=0; i < LINKS_URL.length; i++)
+          a.e_link(href=`#${LINKS_URL[i][0]}`)=LINKS_URL[i][1]
+      .e_footer
+        span created by vdkrasny@uandex.com

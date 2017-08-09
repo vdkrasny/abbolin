@@ -1,0 +1,33 @@
+include ../blocks/faq/faq.pug
+
+mixin section__faq(ANCHORS)
+  - var layout_fix = 'secondary'; // primary || secondary
+  .b_section.remember-scroll-position(class=layout_fix === 'primary' ? 'section--fix_primary' : 'section--fix_secondary')
+    .b_layout-page-fix(class=layout_fix === 'primary' ? 'layout-page-fix--primary' : 'layout-page-fix--secondary')
+      .b_layout
+        p.e_title Остались вопросы?
+        p.e_title Задайте их нам!
+        form.b_field-group.m_vertical
+          .e_item
+            .e_input
+              input.b_ui-text(type='text' required mix="block:field-group elem:object")
+              label.e_caption Ваше имя
+            span.e_error-message Имя неправильно заполнено измените что-то
+          .e_item
+            .e_input
+              input.b_ui-text(type='text' required mix="block:field-group elem:object")
+              label.e_caption Оставтье свой email
+            span.e_error-message Имя неправильно заполнено измените что-то
+          .e_item
+            .e_input
+              textarea.b_ui-text(required mix="block:field-group elem:object" style="resize: none")
+              label.e_caption Оставтье свой email
+            span.e_error-message Имя неправильно заполнено измените что-то
+          .e_item
+            button.b_btn.m_button(mix="block:field-group elem:object, block:ui mods:[view-basic]") Отправить
+    .screen__inside
+      .b_layout-page
+        div(class=layout_fix === 'primary' ? 'layout-page__secondary layout-page__secondary--primary_fix' : 'layout-page__primary layout-page__primary--secondary_fix')
+          .b_layout
+            .e_title Вопрос-Ответ
+            +faq()

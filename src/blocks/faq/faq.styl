@@ -1,0 +1,15 @@
++b('faq')
+  +e('item')
+    margin: 30px 0 0;
+    &:first-child
+      margin-top: 0
+    &.active
+      +e('answer')
+        display block
+    &.if-js-disable
+      +e('answer')
+        display block
+  +e('answer')
+    padding 10px 0 0 15px
+    line-height: 1.5
+    display none

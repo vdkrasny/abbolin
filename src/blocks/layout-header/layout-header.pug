@@ -1,0 +1,10 @@
+include ../navigation-control/navigation-control.pug
+
+mixin layout-header
+  .b_layout-header&attributes(attributes)
+    .e_edges.m_start
+      a.b_btn.m_link(class="ui ui--view-basic" href='tel:+375291668905') +375291668905
+    .e_we-are
+      h1 ABbolin Studio. Создание landing page. Cайтов. Интернет-магазинов. Реклама в интернете: SMM. SEO. Контекстная реклама.
+    .e_edges.m_end
+      +navigation-control()

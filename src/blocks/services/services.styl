@@ -1,0 +1,34 @@
++b('services')
+  display flex
+  flex-wrap: wrap;
+  justify-content: space-between
+  margin -15px 0
+  padding-bottom: 30px
+  +e('item')
+    overflow hidden
+    display flex
+    flex-direction column
+    margin 15px 0
+    flex-basis calc((100% / 3) - 15px)
+    text-align center
+  +e('image')
+    width: 60%
+    height: @width
+    display: block
+    margin: 0 auto
+  +e('caption')
+    display: block
+    margin: auto 0 0
+    text-align: center
+  +e('title')
+    display: block
+    margin: 0 0 15px
+    font-size: 24px
+    text-align: left
+  +e('more')
+    & li
+      text-align: left;
+      position relative
+      _icon: 14px
+      & + li
+        margin-top: 10px;

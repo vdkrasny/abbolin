@@ -1,0 +1,40 @@
+// To use: example (_icon: 20px right top 30px)
+// First param "size" must be specified
+//
+// Position icons:
+// Default: left, center
+// That it would be sufficient to specify the h-center
+//
+// Indent:
+// By default is equal to the size of the i + 15 px
+// x_pos -> left | center | right
+// y_pos -> top | center | bottom
+
+_icon(size , x_pos='left', y_pos='center', pad=15px)
+  if x_pos is left
+    padding-left: (size + pad)
+    & .icon
+      left: 0
+  else if x_pos is right
+    padding-right: (size + pad)
+    & .icon
+      right: 0
+  else if x_pos is center
+    y_pos = null
+    & .icon
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      margin: auto
+  & .icon
+    position: absolute
+    width: size
+    height: size
+    if y_pos is top
+      top: 0
+    else if y_pos is center
+      top: 50%
+      margin-top: (-1 * (size / 2))
+    else if y_pos bottom
+      bottom: 0

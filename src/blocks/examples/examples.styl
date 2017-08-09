@@ -1,0 +1,33 @@
++b('examples')
+  display flex
+  flex-wrap: wrap;
+  justify-content: space-between
+  margin 0 -15px
+  transition: all 0.5s ease;
+  +e('item')
+    position relative
+    overflow hidden
+    margin 15px
+    flex-basis calc((100% / 2) - 30px)
+    &:hover
+      .examples__description
+        opacity 1
+  +e('image')
+    display block
+    height: 300px
+    background-repeat no-repeat
+    background-size cover
+  +e('footer')
+    padding 20px 0
+    background-color $color-secondary
+    text-align center
+  +e('description')
+    position: absolute;
+    opacity 0
+    text-align: left;
+    padding: 27px 0 0 29px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 54px;
+    background-color $color-secondary

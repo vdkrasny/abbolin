@@ -1,0 +1,95 @@
+include ../blocks/buttons/slide-nav_home.pug
+
+mixin section__landing-page(ANCHORS)
+  .b_section.m_fix_secondary.remember-scroll-position
+    +slide-nav_home(href=`#${ANCHORS}/0`)
+    .b_layout-page-fix.m_secondary
+      .b_layout
+        .b_caption.m_main Лендинг
+        p Это автономная интернет-страница, на которую потенциальный клиент попадает после клика по рекламному объявлению или в результате поиска. Лендинги достаточно широко используются в маркетинге в силу своего принципиального отличия от традиционного веб-сайта.
+        p Главная цель лендинга — совершение посетителем конкретного (целевого) действия, то веб-сайты имеют многоцелевой характер. Подобное ограничение позволяет посадочной странице быть невероятно эффективной, а потому и оставаться востребованной среди специалистов.
+        .e_footer
+          a.btn.btn--link.ui.ui--view-basic(href=`#${ANCHORS}/4`) оформить бриф
+    .slide.active
+      .b_layout-page
+        .e_primary.m_secondary_fix
+          .b_layout
+            .b_services
+              .e_item
+                img.e_image(src="img/tasks.svg" alt="")
+                span.e_caption разработка технической документации
+              .e_item
+                img.e_image(src="img/prototype.svg" alt="")
+                span.e_caption прототпирование
+              .e_item
+                img.e_image(src="img/prototype.svg" alt="")
+                span.e_caption дизайн
+              .e_item
+                img.e_image(src="img/prototype.svg" alt="")
+                span.e_caption верстка
+              .e_item
+                img.e_image(src="img/prototype.svg" alt="")
+                span.e_caption программирование
+              .e_item
+                .e_title Дополнительно
+                ul.e_more
+                  li #[span.b_icon.m_check] Гарантия 1 год
+                  li #[span.b_icon.m_check] Гарантия 1 год
+                  li #[span.b_icon.m_check] Гарантия 1 год
+                  li #[span.b_icon.m_check] Тестирование
+            .b_caption.m_main Проекты ктороые делали мы
+            .b_examples
+              .e_item
+                //a.b_link.e_seo(href=`#${ANCHORS}/1` target="_blank" rel="noopener")
+                a.b_link.e_seo(href="http://xn--e1aqbdgs2a6b.xn--90ais/" target="_blank" rel="noopener")
+                .e_image(style="background-image: url(../img/imf.png);")
+                .e_footer алкогольная продукция
+                .e_description
+                  p asadasd
+                  p adasda
+                  p asdasdasdasd
+    .slide.if-js-disable
+      .b_layout-page
+        .e_primary.m_secondary_fix
+          .b_layout
+            .b_projects
+              img(src="" data-src="/projects/bellatrix/main.png" )
+              noscript
+                img(src="img/example.jpg" width="640" heigh="480")
+              img(src="" data-src="/projects/bellatrix/deps.png")
+              img(src="" data-src="/projects/bellatrix/faq.png")
+              img(src="" data-src="/projects/bellatrix/history.png")
+    .slide.if-js-disable
+      .b_layout-page
+        .e_primary.m_secondary_fix
+          .b_layout
+            - for(var i = 0; i < 510; i++)
+            p Описание Proj 2
+    .slide.if-js-disable
+      .b_layout-page
+        .e_primary.m_secondary_fix
+          .b_layout
+            - for(var i = 0; i < 510; i++)
+            p Описание Proj 3
+    .slide.if-js-disable
+      .b_layout-page
+        .e_primary.m_secondary_fix
+          .b_layout
+            form.b_field-group.m_vertical
+              .e_item
+                .e_input
+                  input.b_ui-text(type='text' required mix="block:field-group elem:object")
+                  label.e_caption Ваше имя
+                span.e_error-message Имя неправильно заполнено измените что-то
+              .e_item
+                .e_input
+                  input.b_ui-text(type='text' required mix="block:field-group elem:object")
+                  label.e_caption Оставтье свой email
+                span.e_error-message Имя неправильно заполнено измените что-то
+              .e_item
+                .e_input
+                  textarea.b_ui-text(required mix="block:field-group elem:object" style="resize: none")
+                  label.e_caption Оставтье свой email
+                span.e_error-message Имя неправильно заполнено измените что-то
+              .e_item
+                button.b_btn.m_button(mix="block:field-group elem:object, block:ui mods:[view-basic]") Отправить

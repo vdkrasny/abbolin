@@ -1,0 +1,59 @@
+# destenation folder
+public
+
+# Numerous always-ignore extensions
+*.bak
+*.diff
+*.err
+*.exe
+*.log
+*.orig
+*.rej
+*.sass-cache
+*.swo
+*.swp
+*.vi
+*~
+
+
+# OS or Editor folders
+*.sublime-grunt.cache
+*.sublime-project
+*.sublime-workspace
+._*
+.\#*
+\#*
+*\#
+.cache
+.DS_Store
+.project
+.settings
+.tmproj
+Thumbs.db
+
+# Folders to ignore
+.CVS
+.git
+.hg
+.idea
+.svn
+bower_components
+
+# Node.JS
+node_modules
+_sorce
+npm-debug.log\#*\#
+.DS_Store
+*.bak
+*.diff
+*.err
+*.exe
+*.log
+*.orig
+*.rej
+*.sass-cache
+*.swo
+*.swp
+*.vi
+*~
+src/data/pages.json

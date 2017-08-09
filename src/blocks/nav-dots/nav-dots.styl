@@ -1,0 +1,107 @@
+screen_border_horizontal = 34px
+screen_border_vertical = 84px
+
+item_wh = 32px
+item_wh_small = (item_wh / 2)
+item_position = item_wh
+item_bg_color = #fff
+
++b('dots-line')
+  position: absolute
+  transform: translate3d(0,0,0)
+  opacity: 1
+  z-index: 1
+  +m('right')
+    top: 50%
+    right: screen_border_horizontal
+    +e('label')
+      left: auto
+      right: 0
+  +m('left')
+    top 50%
+    left: screen_border_horizontal
+    +e('label')
+      left: 0
+      right: auto
+  +m('top')
+    left: 50%
+    top: screen_border_vertical
+  +m('bottom')
+    left: 50%
+    bottom: screen_border_vertical
+  +e('list')
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &:before
+      content: ""
+      position: absolute
+      background: rgba(255,255,255,0.5)
+    +m('vertical')
+      flex-direction: column
+      &:before
+        top: item_position
+        bottom: item_position
+        width: 2px
+    +m('horizontal')
+      flex-direction: row
+      &:before
+        left: item_position
+        right: item_position
+        height: 2px
+  +e('point')
+    position: relative
+    display: flex
+    margin: item_wh_small
+    min-width: item_wh
+    min-height: item_wh
+  +e('link')
+    display: block
+    margin: auto
+    width: item_wh_small
+    height: item_wh_small
+    border-radius: item_wh_small
+    text-decoration: none
+    background-color: item_bg_color
+    transition: all 0.2s linear
+    &:hover
+      width: item_wh
+      height: item_wh
+      border-radius: item_wh
+    &.active
+      width: item_wh
+      height: item_wh
+      border-radius: item_wh
+      & ~ .dots-line__label
+        width: auto;
+        color: #043f5f
+        transform: scale(1, 1)
+  +e('label')
+    cursor default
+    overflow: hidden
+    position: absolute
+    top: 0
+    bottom: 0
+    display: block
+    margin: auto
+    padding: 0 item_wh_small
+    line-height: item_wh
+    border-radius: item_wh
+    color: item_bg_color
+    background-color: item_bg_color
+    transition-delay: 0.3s
+    transition: all 0.1s linear
+    transform: scale(0, 0.5)
+    transform-origin: 90% center
+    user-select: none
+
++b('hidden-scroll')
+  position: relative
+  height: 100%
+  width: 100%
+  overflow: hidden
+  +e('inner')
+    width: calc(100% + 20px)
+    height: 100%
+    overflow-y: scroll

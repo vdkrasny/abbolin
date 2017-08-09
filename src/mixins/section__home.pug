@@ -1,0 +1,49 @@
+mixin section__home(ANCHORS)
+  .section
+    .b_layout-page
+      .e_secondary
+        .b_layout
+          .e_offer
+            h2.b_caption.m_main
+              | Хотите повысить продажи
+              br
+              | и поток клиентов в Вашем
+              br
+              | Бизнесе на 30-50-70% уже
+              br
+              | через 14 дней?
+          .e_advantages
+            ul.b_list
+              li.e_item #[span.b_icon.m_check] Выполняем в срок согласно договора
+              li.e_item #[span.b_icon.m_check] Бесплатная поддержка
+              li.e_item #[span.b_icon.m_check] Маркетинговый подход в разработке и продвижении сайта
+              li.e_item
+                span.b_icon.m_check
+                span Анализ вашей ниши и конкурентов
+                  br
+                  | #[strong БЕСПЛАТНО]
+      .e_primary
+        .b_layout
+          .b_mac
+            img(src="img/responsive-mockup.svg")
+          .e_footer
+            .e_appeal
+              h3.b_caption.m_sub
+                | Оставьте заявку до 14.08.2017
+                br
+                | #[strong и получите прототип сайта]
+                br
+                | БЕСПЛАТНО
+            form.b_field-group.m_horizontal
+              .e_item
+                .e_input
+                  input.b_ui-text(type='text' required mix="block:field-group elem:object")
+                  label.e_caption Ваше имя
+                span.e_error-message Имя неправильно заполнено измените что-то
+              .e_item
+                .e_input
+                  input.b_ui-text(type='text' required mix="block:field-group elem:object")
+                  label.e_caption Электронная почта
+                span.e_error-message Имя неправильно заполнено измените что-то
+              .e_item
+                button.b_btn.m_button(mix="block:field-group elem:object, block:ui mods:[view-basic]") Отправить

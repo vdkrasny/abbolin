@@ -1,0 +1,37 @@
+scroll_rail_size = 3px
+.iScrollVerticalScrollbar
+.iScrollHorizontalScrollbar
+  position: absolute;
+  z-index: 9999999999;
+  background: rgba(255, 255, 255, 0.25);
+  transition 0.2s ease
+.iScrollVerticalScrollbar
+  width: scroll_rail_size;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  &:hover
+    width: (scroll_rail_size * 3);
+  &.iScrollBothScrollbars
+    bottom: scroll_rail_size;
+.iScrollHorizontalScrollbar
+  height: scroll_rail_size;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  &:hover
+    height: (scroll_rail_size * 3);
+  &.iScrollBothScrollbars
+    right: scroll_rail_size;
+.iScrollIndicator
+  cursor pointer
+  position: absolute;
+  background: #ffffff;
+  width: 100%;
+.section--fix_primary .iScrollVerticalScrollbar
+  left 0
+.layout-page-fix--primary .iScrollVerticalScrollbar
+  left: auto
+.layout-page-fix--secondary .iScrollVerticalScrollbar
+  left 0
+  right: auto
